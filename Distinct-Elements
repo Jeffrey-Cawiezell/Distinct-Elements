@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Distinct_Elements{
+	public static void main(String [] args){
+		Scanner sc = new Scanner(System.in);
+		final int NUM_ELEMENTS = 101;
+		ArrayList <Integer> array = new ArrayList <Integer>();
+		int i = 0;
+		int j = 0;
+		System.out.println("Enter integer values into the array, or -1 to stop:");
+		for(i = 0; i < NUM_ELEMENTS; i++){
+			int numbers = sc.nextInt();
+				if(numbers == -1){
+					break;}
+				if(!array.contains(numbers)){
+					array.add(numbers);}
+		}
+		System.out.println("Distinct values in the array:");
+		System.out.print("(");
+		for(i = 0; i < array.size(); i++){
+			System.out.printf("%3d", array.get(i));
+			if(i < array.size() -1){
+				System.out.print(",");}
+		}
+			System.out.println(")");
+	}
+}
